@@ -1,0 +1,11 @@
+@import '../../../styles-variables';
+
+.header-top{margin:14px 0}
+.header-top__img {max-height: 45px;}
+.header-title__head{
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 15px;
+  padding: 14px 10px;
+}
+.header-title{background-color: $primary;}

@@ -1,0 +1,10 @@
+@import '../../../styles-variables';
+
+footer{padding-top:20px;padding-bottom:40px;}
+.footer-social{margin:10px 0}
+.footer-social__anchor{padding: 0 8px;}
+.footer-social__anchor span{background-color: $primary;border-radius: 20px;color: white;padding: 8px;width: 33px;}
+
+.footer-links{}
+.footer-links__anchor{font-size: 0.7rem;color:black;border-right: 1px solid;padding: 0 8px;}
+.footer-links__anchor:last-child{border-right: none;}

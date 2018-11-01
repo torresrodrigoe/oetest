@@ -1,0 +1,16 @@
+@import '../../../styles-variables';
+
+.timer-live{width: 80px;
+    border: 1px solid $secondary;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    margin:14px auto;
+    border-radius: 55%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $secondary;
+  }
+.timer-suscribe{padding: 28px 0;}
+.timer-live__watch{display:block;margin: 0 auto;}

@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles-variables';
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
+
+body{font-family: Nunito, sans-serif;}
+h1,h2,h3,h4,h5,h6{font-family: Nunito; color: $primary}
+h2, .h2{font-size: 1.75rem; margin-bottom: 15px;}
+h4, .h4{font-size: 1.3rem;}
+
+.btn-primary{background-color: $primary; color:white;}
+.btn-secondary{background-color: $secondary; color:white;}
+
+.owl-prev {
+    width: 5px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    display: block !important;
+    border:0px solid black;
+}
+.owl-next {
+    width: 5px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    right: -30px;
+    display: block !important;
+    border:0px solid black;
+}
+.owl-theme .owl-nav [class*='owl-']:hover{background-color: transparent !important;}
+.owl-theme .owl-nav [class*='owl-']:focus{outline:none;}
+.owl-prev i, .owl-next i {transform : scale(4, 4); color: #ccc;}

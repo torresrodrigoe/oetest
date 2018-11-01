@@ -1,0 +1,10 @@
+<div class="timer">
+  <div *ngIf="this.duration > 0" class="timer-live row">
+    <span class="timer-live__watch align-self-center">
+      {{minutes}}:{{seconds}}
+    </span>
+  </div>
+  <div *ngIf="this.duration == 0" class="timer-suscribe">
+    <button class="btn btn-secondary" (click)="startLive()">Comenzar</button>
+  </div>
+</div>

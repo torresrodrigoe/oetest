@@ -1,0 +1,61 @@
+<div class="container header-progress">
+  <div class="row">
+    <div class="col-sm-4 header-progress-live">
+      <h2 class="text-center">Clases en VIVO</h2>
+      <p class="text-center">La inscripción termina en:</p>
+      <div class="text-center">
+        <app-timer></app-timer>
+      </div>
+      <div class="text-center">
+        <a class="btn btn-primary header-progress-live__call" href="#class-section">Inscribirme</a>
+      </div>
+    </div>
+    <div class="col-sm-8 header-progress-stats">
+      <h2 class="header-progress-stats__head">Mi Progreso - Nivel {{progress.currentLevel}}</h2>
+      <div class="header-progress-stats__main row">
+        <div class="col-10">
+          <div class="progress header-progress-stats__main-bar">
+            <div class="progress-bar bg-secondary" role="progressbar" [style.width.%]="progress.levelProgressPercent" [attr.aria-valuenow]="progress.levelProgressPercent | number:'1.0-0'" [attr.aria-valuemin]="0" [attr.aria-valuemax]="100"></div>
+          </div>
+        </div>
+        <div class="col-2">
+          {{ progress.levelProgressPercent | number:'1.0-0'}} %
+        </div>
+      </div>
+
+      <h4 class="header-progress-stats__subtitle">Clases en Vivo  <app-stats [reach]="progress.liveClassTaken" [required]="progress.liveClassRequired"></app-stats></h4>
+      <div class="row">
+        <div class="col-10">
+          <div class="progress header-progress-stats__sub-bar">
+            <div class="progress-bar" role="progressbar" [style.width.%]="progress.liveClassProgressPercent" [attr.aria-valuenow]="progress.liveClassProgressPercent | number:'1.0-0'" [attr.aria-valuemin]="0" [attr.aria-valuemax]="100"></div>
+          </div>
+        </div>
+        <div class="col-2">
+          {{ progress.liveClassProgressPercent | number:'1.0-0'}} %
+        </div>
+      </div>
+      <h4 class="header-progress-stats__subtitle">Lecciones <app-stats [reach]="progress.lessonTaken" [required]="progress.lessonRequired"></app-stats></h4>
+      <div class="row">
+        <div class="col-10">
+          <div class="progress header-progress-stats__sub-bar">
+            <div class="progress-bar" role="progressbar" [style.width.%]="progress.lessonProgressPercent" [attr.aria-valuenow]="progress.lessonProgressPercent | number:'1.0-0'" [attr.aria-valuemin]="0" [attr.aria-valuemax]="100"></div>
+          </div>
+        </div>
+        <div class="col-2">
+          {{ progress.lessonProgressPercent | number:'1.0-0'}} %
+        </div>
+      </div>
+
+      <h4 class="header-progress-stats__subtitle">Prácticas  <app-stats [reach]="progress.practiceHoursTaken" [required]="progress.practiceHoursRequired"></app-stats></h4>
+      <div class="row">
+        <div class="col-10">
+          <div class="progress header-progress-stats__sub-bar">
+            <div class="progress-bar" role="progressbar" [style.width.%]="progress.practiceProgressPercent" [attr.aria-valuenow]="progress.practiceProgressPercent | number:'1.0-0'" [attr.aria-valuemin]="0" [attr.aria-valuemax]="100"></div>
+          </div>
+        </div>
+        <div class="col-2">
+          {{ progress.practiceProgressPercent | number:'1.0-0'}} %
+        </div>
+      </div>
+    </div>
+  </div>

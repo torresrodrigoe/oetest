@@ -1,15 +1,33 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HeaderProgressComponent } from './components/header-progress/header-progress.component';
+import { ClassComponent } from './components/class/class.component';
+import { LessonComponent } from './components/lesson/lesson.component';
+import { PracticeComponent } from './components/practice/practice.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { OwlModule } from 'ngx-owl-carousel';
+import { TimerComponent } from './components/timer/timer.component';
+import { StatsComponent } from './components/stats/stats.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        OwlModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        HeaderProgressComponent,
+        ClassComponent,
+        LessonComponent,
+        PracticeComponent,
+        FooterComponent,
+        TimerComponent,
+        StatsComponent
       ],
     }).compileComponents();
   }));
@@ -20,16 +38,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'oetest'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('oetest');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to oetest!');
-  });
 });

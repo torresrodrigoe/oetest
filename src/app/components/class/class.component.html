@@ -1,0 +1,19 @@
+<div class="container" id="class-section">
+  <div class="class-section">
+    <h2 class="class-section_title">Clases en Vivo <app-stats [reach]="progress.liveClassTaken" [required]="progress.liveClassRequired"></app-stats></h2>
+    <div class="row">
+      <div class="class-item col-sm-4" *ngFor="let class of classes">
+        <div class="class-item__top" [style.backgroundImage]="'url('+ class.img +')'">
+          <h5 class="class-item__type text-center">{{class.type}}</h5>
+        </div>
+        <h2 class="class-item__title text-center">{{class.title}}</h2>
+
+        <div class="text-center">
+          <button class="class-item__suscribe btn bg-secondary">Inscríbite</button>
+        </div>
+        <p class="class-item__description">{{class.description}}</p>
+        <a *ngIf="class.document" href="{{class.document}}" target="_blank" class="class-item__view">Ver Láminas de clase</a>
+      </div>
+    </div>
+  </div>
+</div>

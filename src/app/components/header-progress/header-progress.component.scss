@@ -1,0 +1,25 @@
+@import '../../../styles-variables';
+
+.header-progress{
+  border-bottom:1px solid $primary;
+  padding-top:15px;
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+}
+.header-progress-live{padding-bottom: 15px;}
+.header-progress-live__call{
+  margin:10px 0;
+  text-align: center;
+}
+.header-progress-stats__main-bar{
+  margin-top:5px;
+  height:14px;
+}
+.header-progress-stats__subtitle{
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+.header-progress-stats__sub-bar{
+  margin-top:10px;
+  height: 7px;
+}

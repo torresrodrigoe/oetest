@@ -1,0 +1,24 @@
+<div id="practice-section">
+  <div class="container">
+    <div class="practice-section">
+      <h2 class="practice-section_title">Prácticas <app-stats [reach]="progress.practiceHoursTaken" [required]="progress.practiceHoursRequired"></app-stats></h2>
+      <div class="practice-section__carousel">
+        <owl-carousel
+            [options]="sliderOptions"
+            [items]="practices"
+            [carouselClasses]="['owl-theme', 'sliding']">
+            <div class="practice-item" *ngFor="let practice of practices;let i = index">
+              <div *ngIf="practice.img" class="practice-item__top" [style.backgroundImage]="'url('+ practice.img +')'">
+                <span *ngIf="practice.status == 'IN_PROGRESS'" class="practice-item--started bg-primary">En Progreso</span>
+              </div>
+              <div *ngIf="!practice.img" class="practice-item__top" [style.backgroundImage]="'url(https://lessons.openenglish.com/production/252684e0-2963-45fd-a592-03b3b1e34a96/assets/photography-image.png)'">
+                <span *ngIf="practice.status == 'IN_PROGRESS'" class="practice-item--started bg-primary">En Progreso</span>
+              </div>
+              <h2 class="practice-item__title text-center">{{practice.title}}</h2>
+              <p class="practice-item__description">{{practice.description}}</p>
+            </div>
+        </owl-carousel>
+      </div>
+    </div>
+  </div>
+</div>

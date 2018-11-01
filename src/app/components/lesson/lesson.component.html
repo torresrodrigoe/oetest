@@ -1,0 +1,24 @@
+<div id="lesson-section">
+  <div class="container">
+    <div class="lesson-section">
+      <h2 class="lesson-section__title">Lecciones <app-stats [reach]="progress.lessonTaken" [required]="progress.lessonRequired"></app-stats></h2>
+      <div class="lesson-section__carousel">
+         <owl-carousel
+             [options]="sliderOptions"
+             [items]="lessons"
+             [carouselClasses]="['owl-theme', 'sliding']">
+             <div class="lesson-item" *ngFor="let lesson of lessons;let i = index">
+               <div *ngIf="lesson.img" class="lesson-item__top" [style.backgroundImage]="'url('+ lesson.img +')'">
+                 <span *ngIf="lesson.status == 'IN_PROGRESS'" class="lesson-item--started bg-primary">En Progreso</span>
+               </div>
+               <div *ngIf="!lesson.img" class="lesson-item__top" [style.backgroundImage]="'url(https://lessons.openenglish.com/production/252684e0-2963-45fd-a592-03b3b1e34a96/assets/photography-image.png)'">
+                 <span *ngIf="lesson.status == 'IN_PROGRESS'" class="lesson-item--started bg-primary">En Progreso</span>
+               </div>
+               <h2 class="lesson-item__title text-center">{{(i+1)+')'+lesson.title}}</h2>
+               <p class="lesson-item__description">{{lesson.description}}</p>
+             </div>
+         </owl-carousel>
+      </div>
+    </div>
+  </div>
+</div>

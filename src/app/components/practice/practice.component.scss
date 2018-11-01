@@ -1,0 +1,33 @@
+@import '../../../styles-variables';
+
+#practice-section{padding:20px 0;}
+.practice-item{
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.practice-item__top{
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 5px;
+  position:relative;
+}
+.practice-item .practice-item__title{
+  color:black;
+  font-size: 1.2rem;
+  margin: 15px 0 4px 0;
+}
+.practice-item .practice-item__description{
+  font-size:0.9rem;
+  margin-bottom: 2px
+}
+.practice-section__carousel{padding: 0 20px;}
+.practice-item--started{
+  position: absolute;
+  bottom: 0;
+  font-size: 0.7rem;
+  padding: 5px 6px;
+  right: 0;
+}
